@@ -1,7 +1,5 @@
 package br.edu.up.controllers;
 
-import java.util.ArrayList;
-
 public class Dia {
     private int diaMes;
     private Compromisso[] compromissos;

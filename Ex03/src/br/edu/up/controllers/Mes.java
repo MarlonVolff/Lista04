@@ -1,7 +1,5 @@
 package br.edu.up.controllers;
 
-import java.util.ArrayList;
-
 public class Mes {
     private String nome;
     private int qtdeDias;
@@ -12,21 +10,15 @@ public class Mes {
         this.qtdeDias = qtdeDias;
         this.nome = nome;
         this.dias = new Dia[qtdeDias];
-        for (int i = 0; i < qtdeDias; i++) {
-            dias[i] = new Dia(i + 1);
-        }
+        for (int i = 0; i < qtdeDias; i++) dias[i] = new Dia(i + 1);
     }
 
     public void adicionarDia(Dia dia) {
-        if (count < dias.length) {
-            dias[count++] = dia;
-        }
+        if (count < dias.length) dias[count++] = dia;
     }
 
     public void adicionarCompromisso(Compromisso comp, int diaMes) {
-        if (diaMes >= 1 && diaMes <= qtdeDias) {
-            dias[diaMes - 1].adicionarCompromisso(comp);
-        }
+        if (diaMes >= 1 && diaMes <= qtdeDias) dias[diaMes - 1].adicionarCompromisso(comp);
     }
 
     public void adicionarCompromisso(String pessoa, String local, String assunto, int hora, int diaMes) {
@@ -35,16 +27,12 @@ public class Mes {
     }
 
     public void excluirCompromisso(int diaMes, int hora) {
-        if (diaMes >= 1 && diaMes <= qtdeDias) {
-            dias[diaMes - 1].excluirCompromisso(hora);
-        }
+        if (diaMes >= 1 && diaMes <= qtdeDias) dias[diaMes - 1].excluirCompromisso(hora);
     }
 
     public String listarCompromissos(int diaMes) {
-        if (diaMes >= 1 && diaMes <= qtdeDias) {
-            return dias[diaMes - 1].listarCompromissos();
-        }
-        return "";
+        if (diaMes >= 1 && diaMes <= qtdeDias) return dias[diaMes - 1].listarCompromissos();
+        else return "";
     }
 
     public String listarCompromissos() {
@@ -57,11 +45,11 @@ public class Mes {
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public int getQtdeDias() {
-        return qtdeDias;
+        return this.qtdeDias;
     }
 
 }
