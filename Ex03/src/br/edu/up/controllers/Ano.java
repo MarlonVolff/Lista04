@@ -23,7 +23,7 @@ public class Ano {
 
     public String listarComprimissos(String nomeMes){
         String temp = ano + "\n";
-        for(int i = 1; i <= count; i++){
+        for(int i = 0; i <= count; i++){
             if(meses[i].getNome() == nomeMes) temp += meses[i].listarCompromissos();
         }
         return temp;
