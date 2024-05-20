@@ -7,11 +7,12 @@ public class Evento {
     private String local;
     private int lotacaoMax;
     private int ingressosVendidos;
-    private int precoIngreco;
+    private double precoIngreco;
 
     public int getId() {
         return id;
     }
+
     public void setId(int id) {
         this.id = id;
     }
@@ -19,6 +20,7 @@ public class Evento {
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -26,6 +28,7 @@ public class Evento {
     public String getData() {
         return data;
     }
+
     public void setData(String data) {
         this.data = data;
     }
@@ -33,6 +36,7 @@ public class Evento {
     public String getLocal() {
         return local;
     }
+
     public void setLocal(String local) {
         this.local = local;
     }
@@ -40,6 +44,7 @@ public class Evento {
     public int getLotacaoMax() {
         return lotacaoMax;
     }
+
     public void setLotacaoMax(int lotacaoMax) {
         this.lotacaoMax = lotacaoMax;
     }
@@ -47,27 +52,29 @@ public class Evento {
     public int getIngressosVendidos() {
         return ingressosVendidos;
     }
+
     public void setIngressosVendidos(int ingressosVendidos) {
         this.ingressosVendidos = ingressosVendidos;
     }
 
-    public int getPrecoIngreco() {
+    public double getPrecoIngreco() {
         return precoIngreco;
     }
-    public void setPrecoIngreco(int precoIngreco) {
+
+    public void setPrecoIngreco(double precoIngreco) {
         this.precoIngreco = precoIngreco;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return "| Evento{" + "ID: '" + this.id + "'\n" +
-               "| Nome: '" + this.nome + "'\n" +
-               "| Data: '" + this.data + "'\n" +
-               "| Local: '" + this.local + "'\n" +
-               "| LotacaoMax: '" + this.lotacaoMax+ "'\n" +
-               "| IngressosVendidos'" + this.ingressosVendidos+ "'\n" +
-               "| PrecoIngreco'" + this.precoIngreco + "'\n" +
-               "| }";
+                "| Nome: '" + this.nome + "'\n" +
+                "| Data: '" + this.data + "'\n" +
+                "| Local: '" + this.local + "'\n" +
+                "| LotacaoMax: '" + this.lotacaoMax + "'\n" +
+                "| IngressosVendidos'" + this.ingressosVendidos + "'\n" +
+                "| PrecoIngreco'" + this.precoIngreco + "'\n" +
+                "| }";
     }
-    
+
 }
