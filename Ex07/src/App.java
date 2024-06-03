@@ -1,9 +1,6 @@
-import br.edu.up.Controllers.AlunoController;
-import br.edu.up.Controllers.DisciplinaController;
-import br.edu.up.Controllers.ProfessorController;
-import br.edu.up.Models.Aluno;
-import br.edu.up.Models.Disciplina;
-import br.edu.up.Models.Professor;
+import br.edu.up.Controllers.*;
+import br.edu.up.Models.*;
+import br.edu.up.Views.*;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -40,8 +37,16 @@ public class App {
         disciplina.setAlunos(new Aluno[]{aluno1, aluno2});
         disciplinaController.add(disciplina);
 
-        // Obter e exibir a disciplina
-        Disciplina retrievedDisciplina = disciplinaController.getByName("Química Orgânica");
-        System.out.println(retrievedDisciplina.toString());
+        // Criar a view
+        View view = new View(professorController, alunoController, disciplinaController);
+
+        // Exibir informações
+        view.displayProfessor(1);
+        view.displayAluno(1);
+        view.displayDisciplina(1);
+        view.displayAllProfessores();
+        view.displayAllAlunos();
+        view.displayAllDisciplinas();
+        
     }
 }

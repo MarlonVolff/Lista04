@@ -4,12 +4,16 @@ import br.edu.up.Models.Disciplina;
 
 public class DisciplinaController extends Controller<Disciplina> {
     private Disciplina[] disciplinas = new Disciplina[100];
-    private int currentId = 1;
+    private int count = 1;
+
+    public int getCount() {
+        return count;
+    }
 
     @Override
     public void add(Disciplina disciplina) {
-        disciplinas[currentId - 1] = disciplina;
-        currentId++;
+        disciplinas[count - 1] = disciplina;
+        count++;
     }
 
     @Override

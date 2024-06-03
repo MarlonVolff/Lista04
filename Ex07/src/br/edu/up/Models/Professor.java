@@ -62,7 +62,7 @@ public class Professor extends Pessoa {
                "\n Ano Conclusão: " + this.anoConclusao +
                "\n Nome Título: " + this.nomeTitulo +
                "\n Título Trabalho Conclusão: " + this.tituloTrabalhoConclusao +
-               "} ";
+               "\n} ";
         }
         
     }

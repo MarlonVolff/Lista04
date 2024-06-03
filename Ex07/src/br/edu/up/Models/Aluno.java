@@ -41,7 +41,7 @@ public class Aluno extends Pessoa{
                "\n Ano Ingressão: " + this.anoIngressao +
                "\n Nome Curso: " + this.nomeCurso +
                "\n Turno: " + this.turno +
-               "} ";
+               "\n} ";
     }
     
 }

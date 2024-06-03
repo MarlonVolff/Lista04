@@ -4,13 +4,17 @@ import br.edu.up.Models.Aluno;
 
 public class AlunoController extends Controller<Aluno> {
     private Aluno[] alunos = new Aluno[100];
-    private int currentId = 1;
+    private int count = 1;
+
+    public int getCount() {
+        return count;
+    }
 
     @Override
     public void add(Aluno aluno) {
-        aluno.setMatricula(currentId);
-        alunos[currentId - 1] = aluno;
-        currentId++;
+        aluno.setMatricula(count);
+        alunos[count - 1] = aluno;
+        count++;
     }
 
     @Override

@@ -42,6 +42,6 @@ public class Pessoa {
                "\n Nome: " + this.nome +
                "\n RG: " + this.rg +
                "\n Matrícula: " + this.matricula +
-               "} ";
+               "\n} ";
     }
 }
